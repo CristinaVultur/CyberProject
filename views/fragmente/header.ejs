@@ -1,0 +1,52 @@
+<header>
+    <h1>Cofetaria <span>Dulcelind</span></h1>
+   
+</header>
+<nav>
+        
+    <label id="hamburger" for="ch-menu">
+        <img src="/resurse/imagini/Hamburger_icon_alb.png" alt="menu">
+    </label>
+    <input id="ch-menu" type="checkbox">
+    <ul class="meniu">
+        <li><div>Acasa</div>
+            <ul>
+                <li><a href="/index">Bine ati venit</a></li>
+                <li><a href="/index#promotii">Promotii</a></li>
+                <li><a href="/index#anunturi">Anunturi</a></li>
+                <li><a href="/index#produse">Oferta</a></li>
+                <li><a href="/index#orar">Orar</a></li>
+                <li><a href="/index#index-intrebari">Întrebări</a></li>
+                <li><a href="/index#retete">Rețete</a></li>
+            </ul>
+        </li>
+        <% if (!locals.utilizator) { %>
+            <li><a href="/inregistrare">Inregistrare</a></li>
+        <% }  %>
+        <li><div>Despre</div>
+            <ul>                        
+                <li><a href="/despre">Prezentare</a></li>
+                <li><a href="/despre#istoric">Istoric</a></li>
+                <!--<li><a href="despre.html#motivatie">Motivatie</a></li>-->
+                <!--<li><a href="/despre#galerie">Galerie</a></li>-->
+            </ul>
+        </li>
+		<% if (locals.utilizator && locals.utilizator.rol=="admin") { %> 
+		<li><a href="/useri">Utilizatori</a></li>
+		<% } %>
+        <li><div>Produse</div>
+            <ul>
+                <li><a href="/produse">Toate</a></li>
+                <li><a href="/produse?tip=cofetarie">Prajituri</a></li>
+                <li><a href="/produse?tip=patiserie">Patiserie</a></li>
+                <li><a href="/produse?tip=gelaterie">Gelaterie</a></li>
+            </ul>
+        </li>
+        <li><a href="/cos-virtual">Cos virtual</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <% if (locals.utilizator) { %>
+            <li><a href="/profil"><%- locals.utilizator.username %></a></li>
+            <li><a href="/logout">Logout</a></li>
+        <% }  %>
+    </ul>
+</nav>

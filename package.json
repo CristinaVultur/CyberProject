@@ -1,0 +1,28 @@
+{
+  "name": "pc",
+  "version": "1.0.0",
+  "description": "Site pentru cofetaria Dulcelind",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cofetarie",
+    "prajituri"
+  ],
+  "author": "Irina Ciocan",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "formidable": "^1.2.2",
+    "html-pdf-node": "^1.0.7",
+    "nodemailer": "^6.6.0",
+    "pg": "^8.7.3",
+    "request": "^2.88.2",
+    "sass": "^1.50.0",
+    "sharp": "^0.27.2",
+    "xml-js": "^1.6.11"
+  }
+}
